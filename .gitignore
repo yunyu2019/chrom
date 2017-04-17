@@ -1,0 +1,6 @@
+# komodo edit project files
+.komodotools/
+*.komodoproject
+
+# windows thumbnail cache
+Thumbs.db
