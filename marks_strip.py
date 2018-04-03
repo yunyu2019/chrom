@@ -44,7 +44,8 @@ class stripMarks(object):
     def stripAttr(self,strs):
         rule='(?:{0})="[^\"]*"'.format('|'.join(self.rule))
         strs=self.strip(rule=rule,strs=strs,flags=re.I)
-        strs=self.strip(rule='<h3\s{2,}([^<]*)>',strs=strs,flags=re.I,rel='<H3 \\1>')
+        strs=self.strip(rule='\s+(?=>)',strs=strs,flags=re.I,rel='')
+        strs=self.strip(rule='\s{3,}',strs=strs,flags=re.I,rel=' ')
         return strs
 
     def readMarks(self):
